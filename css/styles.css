@@ -1,4 +1,13 @@
 body{
-    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+}
+#container{
+    border: 1px solid;
+    padding: 1rem;
+    width: 70%;
+    text-align: left;
+    margin: 0 auto;
+}
+#container h1{
+    font-weight: bold;
 }
