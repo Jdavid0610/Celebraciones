@@ -1,5 +1,5 @@
 function funcion(){
-    var variable_uno="esta es la variable inicial pero despues del primer commit";
+    var variable_uno=document.getElementById("mensaje");
+    variable_uno.innerHTML="ay me precionaste muy duro";
 
-    console.log(variable_uno);
 }
