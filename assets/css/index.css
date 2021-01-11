@@ -1,6 +1,15 @@
 .container{
     margin: auto;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 figure img{
-    width: 1px;
+    width: 15em;
+    border-radius: 5px;
+}
+figure figcaption{
+    width: 15em;
 }

@@ -1,11 +1,35 @@
 /*Estos son estilos globales, fuentes y animaciones que se usaran en todo el proyecto*/
 body{
     font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
     margin: 0;
-    background-color: rgb(255, 195, 195);
+    background-color: rgb(255, 145, 145);
     background: url("./../resources/images/fondo.jpg");
+    background-size: 100% ;
     background-repeat: no-repeat;
-	background-size: cover;
+}
+@media (min-width:320px)  { 
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    table, p, img {
+        padding-right: 1em;
+        width: 100%;
+    }
+}
+@media (min-width:480px)  { 
+/* smartphones, Android phones, landscape iPhone */ 
+}
+@media (min-width:600px)  { 
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+}
+@media (min-width:801px)  { 
+/* tablet, landscape iPad, lo-res laptops ands desktops */ 
+}
+@media (min-width:1025px) { 
+/* big landscape tablets, laptops, and desktops */ 
+}
+@media (min-width:1281px) { 
+/* hi-res laptops and desktops */ 
+    
 }
 header{
     animation: LoadAnimation 2.5s linear;

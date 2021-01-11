@@ -16,7 +16,7 @@ header{
     display: flex;
     list-style: none;
     padding-left: 0px;
-    margin: 2px;
+    margin: 0;
     
 }
 #NavBar__items li{
@@ -31,6 +31,6 @@ header{
     font-size: 20px;
 }
 .logo{
-    padding-top: 1px;
+    padding-top: 5px;
     width: 80px;
 }
