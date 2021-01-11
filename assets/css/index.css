@@ -4,7 +4,12 @@
     height: 90%;
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: center;
+}
+figure{
+    padding: 15px;
+    border: solid 1px;
+    border-radius: 5px;
 }
 figure img{
     width: 15em;
