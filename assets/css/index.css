@@ -7,14 +7,15 @@
     justify-content: center;
 }
 figure{
-    padding: 15px;
-    border: solid 1px;
-    border-radius: 5px;
+    padding: 1.5rem;
+    border: solid 0.1rem;
+    border-radius: 0.5rem;
 }
 figure img{
-    width: 15em;
-    border-radius: 5px;
+    width: 40rem;
+    border-radius: 0.5rem;
 }
 figure figcaption{
-    width: 15em;
+    font-size: 1.8rem ;
+    max-width: 40rem;
 }
