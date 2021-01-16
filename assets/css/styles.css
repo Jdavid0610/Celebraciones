@@ -1,4 +1,9 @@
 /*Estos son estilos globales, fuentes y animaciones que se usaran en todo el proyecto*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 html{
     width: 100vw;
     min-width: 740px;

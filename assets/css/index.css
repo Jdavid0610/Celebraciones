@@ -7,6 +7,7 @@
     justify-content: center;
 }
 figure{
+    margin: 1.5rem;
     padding: 1.5rem;
     border: solid 0.1rem;
     border-radius: 0.5rem;
