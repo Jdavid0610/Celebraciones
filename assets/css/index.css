@@ -7,16 +7,23 @@
     justify-content: center;
 }
 figure{
+    width: 40rem;
     margin: 1.5rem;
     padding: 1.5rem;
     border: solid 0.1rem;
     border-radius: 0.5rem;
 }
 figure img{
-    width: 40rem;
+    width: 100%;
     border-radius: 0.5rem;
 }
 figure figcaption{
     font-size: 1.8rem ;
     max-width: 40rem;
+}
+@media (max-width:955px)  { 
+    /* smartphones, Android phones, landscape iPhone*/
+    figure{
+        width: 60rem;
+    }  
 }
