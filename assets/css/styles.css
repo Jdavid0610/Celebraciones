@@ -110,6 +110,7 @@ h1{
     /* smartphones, Android phones, landscape iPhone */ 
     body{
         background: url("./../resources/images/fondo2.jpg");
+        
         background-size: 100%;
         background-repeat: repeat-y;
     }

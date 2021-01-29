@@ -21,7 +21,7 @@ figure figcaption{
     font-size: 1.8rem ;
     max-width: 40rem;
 }
-@media (max-width:955px)  { 
+@media (max-width:480px)  { 
     /* smartphones, Android phones, landscape iPhone*/
     figure{
         width: 60rem;
