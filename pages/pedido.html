@@ -21,13 +21,10 @@
                     <a href="./desayunos.html">Desaynos</a>
                 </li>
                 <li>
-                    <a href="./meriendas.html">Meriendas</a>
+                    <a href="./anchetas.html">Anchetas</a>
                 </li>
                 <li>
                     <a href="./decoraciones.html">Decoraciones</a>
-                </li>
-                <li>
-                    <a href="./eventos_especiales.html">Eventos especiales</a>
                 </li>
                 <li>
                     <a href="./pedido.html">Decoración personalizada</a>
@@ -36,8 +33,17 @@
         </nav>
     </header>
     <main>
+        <h1>Solicita Nuestros Servicios</h1>
+        <section class="container">
+            <select onchange="ServiceSelected()" name="" id="Servicio">
+                <option value="0">Selecciona el servicio</option>
+                <option value="1">Desayuno</option>
+                <option value="2">Ancheta</option>
+                <option value="3">Decoracion</option>
+            </select>
+        </section>
         <div class="contact">
-            <input type="button" value="Enviar">
+            <input onclick="SendEmail()" type="button" value="Enviar">
         </div>
     </main>
     <footer>
@@ -58,4 +64,5 @@
         </section>
     </footer>
 </body>
+<script src="./../assets/js/functions.js"></script>
 </html>
