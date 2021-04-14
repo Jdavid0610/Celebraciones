@@ -1,0 +1,32 @@
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input,select,textarea,button{
+    outline: none;
+    border-color: violet;
+    font-weight: bold;
+    font-size: 2rem;
+    max-width: 80%;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    background: rgb(255, 210, 210);
+    font-family: 'Indie Flower', cursive;
+}
+label{
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    font-size: 2rem;
+}
+textarea{
+    width: 40rem;
+    height: 25rem;
+}
+#fecha, select{
+    cursor: pointer;
+}
+.fc-event{
+    cursor: pointer;
+}

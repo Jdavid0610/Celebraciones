@@ -1,5 +1,6 @@
 var created=0;
 
+
 function SendEmail(){
     window.open('mailto:jdavidortizy2k@gmail.com?subject=holi&body=exd');
 }
@@ -11,7 +12,7 @@ function CreateElement(tag,id,text){
 }
 function ServiceSelected(){
     
-    var referencia=document.getElementsByClassName("container");
+    var referencia=document.getElementsByClassName("form");
     var ref=referencia[0];
     //se trae lo seleccionado
     var servicio=document.getElementById("Servicio");
@@ -21,31 +22,79 @@ function ServiceSelected(){
         //----------------------------------------------------
         var selectmotive=CreateElement("select","motivo","");
 
-        var option = CreateElement("option","","Seleccione el motivo")
+        var option = CreateElement("option","","Selecciona el motivo");
         selectmotive.appendChild(option);
 
-        option = CreateElement("option","","Cumpleaños")
+        option = CreateElement("option","","Cumpleaños");
         selectmotive.appendChild(option);
 
-        option = CreateElement("option","","Aniversario")
+        option = CreateElement("option","","Aniversario");
         selectmotive.appendChild(option);
 
-        option = CreateElement("option","","Graduación")
+        option = CreateElement("option","","Graduación");
         selectmotive.appendChild(option);
 
-        option = CreateElement("option","","Baby Shower")
+        option = CreateElement("option","","Baby Shower");
         selectmotive.appendChild(option);
 
-        option = CreateElement("option","","Primera Comunion")
+        option = CreateElement("option","","Primera Comunion");
         selectmotive.appendChild(option);
 
-        option = CreateElement("option","","Otro")
+        option = CreateElement("option","","Otro");
         selectmotive.appendChild(option);
-        ref.appendChild(selectmotive)
-        
-    }else if(created!=0&&selected=="Selecciona el servicio"){   
+
+        selectmotive.setAttribute("onchange","MotiveSelected()");
+
+        ref.appendChild(selectmotive);
+
+
+    }else if(created==1&&selected=="Selecciona el servicio"){   
         created=0;
         var del = document.getElementById("motivo");
         del.remove();
+    }
+}
+
+function MotiveSelected(){
+    
+    var referencia=document.getElementsByClassName("form");
+    var ref=referencia[0];
+    var motivo = document.getElementById("motivo");
+    var selectedMotive=motivo.options[motivo.selectedIndex].text;
+    
+    if(created==1&&selectedMotive=="Otro"){
+        created=2;
+
+        var OtroMotivo=CreateElement("input","Otro_Motivo","");
+        OtroMotivo.placeholder="Escriba el motivo";
+        ref.appendChild(OtroMotivo);
+
+        var Algunas_palabras=CreateElement("textarea","Algunas_Palabras","");
+        Algunas_palabras.placeholder="Escriba algunas lindas palabras para esa persona especial";
+        ref.appendChild(Algunas_palabras);
+
+    }
+    if(created==1){
+        created=2;
+
+        var Algunas_palabras=CreateElement("textarea","Algunas_Palabras","");
+        Algunas_palabras.placeholder="Escriba algunas lindas palabras para esa persona especial";
+        ref.appendChild(Algunas_palabras);
+
+        var Fecha_Label=CreateElement("label","fecha_label","Selecciona la fecha y hora de entrega");
+        ref.appendChild(Fecha_Label);
+        var Fecha=CreateElement("input","fecha","");
+        Fecha.type="datetime-local";
+        ref.appendChild(Fecha);
+
+
+    }else if(created==2&&selectedMotive=="Selecciona el motivo"){
+        created=1;
+
+        var del = document.getElementById("Algunas_Palabras");
+        var del2 = document.getElementById("Otro_Motivo");
+        del.remove();
+        del2.remove();
+       
     }
 }

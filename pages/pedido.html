@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" href="./../assets/resources/icons/logo.png">
     <link rel="stylesheet" href="./../assets/css/styles.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./../assets/css/pedido.css">
 </head>
 <body>
     <header class="sticky">
@@ -35,12 +35,14 @@
     <main>
         <h1>Solicita Nuestros Servicios</h1>
         <section class="container">
-            <select onchange="ServiceSelected()" name="" id="Servicio">
-                <option value="0">Selecciona el servicio</option>
-                <option value="1">Desayuno</option>
-                <option value="2">Ancheta</option>
-                <option value="3">Decoracion</option>
-            </select>
+            <div class="form">
+                <select onchange="ServiceSelected()" name="" id="Servicio">
+                    <option value="0">Selecciona el servicio</option>
+                    <option value="1">Desayuno</option>
+                    <option value="2">Ancheta</option>
+                    <option value="3">Decoracion</option>
+                </select>
+            </div> 
         </section>
         <div class="contact">
             <input onclick="SendEmail()" type="button" value="Enviar">
