@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script src="./assets/js/functions.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celebraciones</title>
@@ -13,7 +14,7 @@
 <body>
     <header class="sticky">
         <nav id="NavBar">
-            <ul id="NavBar__items">
+            <ul class="NavBar__items" id="NavBar__items">
                 <li>
                     <a href="index.html"><img class="logo" src="./assets/resources/icons/logo.png" alt="Logo Celebraciones"></a>
                 </li>
@@ -28,6 +29,11 @@
                 </li>
                 <li>
                     <a href="./pages/pedido.html">Decoración personalizada</a>
+                </li>
+                <li class="icon">
+                    <a href="" onclick="ResponsiveNavBar()">
+                        <i src="https://img.icons8.com/material-outlined/24/000000/menu--v3.png"></i>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -112,5 +118,4 @@
         </section>
     </footer>
 </body> 
-<script src="./assets/js/functions.js"></script>
 </html>

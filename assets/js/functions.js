@@ -98,3 +98,11 @@ function MotiveSelected(){
        
     }
 }
+function ResponsiveNavBar() {
+    var x = document.getElementById("NavBar__items");
+    if (x.className === "NavBar__items") {
+      x.className += " responsive";
+    } else {
+      x.className = "NavBar__items";
+    }
+  }
