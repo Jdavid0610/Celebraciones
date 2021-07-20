@@ -43,7 +43,7 @@ header{
     outline: none;
     
 }
-#NavBar__items li:hover{
+#NavBar__items li:not(:first-child,:last-child):hover{
     background-color: violet;
     color: black;
     cursor: pointer;
@@ -145,7 +145,7 @@ h1{
 }
 
 @media (max-width:955px)  { 
-    /* smartphones, Android phones, landscape iPhone */
+    /* small laptops, tablets, horizontal cellphones  */
     
     body{
         background: url("./../resources/images/fondo2.jpg");
@@ -153,12 +153,52 @@ h1{
         background-size: 100%;
         background-repeat: repeat-y;
     }
-    #NavBar__items li:not(:first-child) {
+    #NavBar__items li:not(:first-child,:last-child) {
         display: none;
+    }
+    #NavBar__items{
+        padding-left: 7rem;
+        justify-content: space-between;
+    }
+    #NavBar__items li:last-child{
+        background-color: rgb(255, 210, 210);
     }
     #NavBar__items li a.icon{
         float: right;
         display: block;
+    }
+    #NavBar__items.responsive {
+        padding-right: 7rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    #NavBar__items.responsive li a.icon {
+        background-color: violet;
+        padding: 1.4rem 1.6rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    #NavBar__items.responsive li:last-child:hover {
+        background-color: rgb(255, 210, 210);
+    }
+    #NavBar__items.responsive li:first-child:hover {
+        background-color: rgb(255, 210, 210);
+    }
+    #NavBar__items.responsive li:not(:first-child,:last-child) {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    #NavBar__items.responsive li:not(:first-child,:last-child) a {
+        width: 100%;
+    }
+    figure{
+        width: 60rem;
+    }
+    figure img{
+        max-height: 55rem;
     }
 }
 @media (max-width:480px)  { 

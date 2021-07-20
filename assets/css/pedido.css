@@ -30,3 +30,12 @@ textarea{
 .fc-event{
     cursor: pointer;
 }
+
+@media (min-height:541px)  { 
+    /* smartphones, Android phones, landscape iPhone*/
+    footer{
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+}

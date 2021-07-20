@@ -14,7 +14,7 @@
 <body>
     <header class="sticky">
         <nav id="NavBar">
-            <ul id="NavBar__items">
+            <ul class="NavBar__items" id="NavBar__items">
                 <li>
                     <a href="./../index.html"><img class="logo" src="./../assets/resources/icons/logo.png" alt="Logo Celebraciones"></a>
                 </li>
@@ -30,6 +30,11 @@
                 <li>
                     <a href="./pedido.html">Decoración personalizada</a>
                 </li>
+                <li >
+                    <a href="javascript:void(0);" class="icon" onclick="ResponsiveNavBar()">
+                        <img src="https://img.icons8.com/ios-glyphs/50/000000/menu--v1.png"/>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -43,6 +48,18 @@
                     <option value="2">Ancheta</option>
                     <option value="3">Decoracion</option>
                 </select>
+                <select  onchange="MotiveSelected()"name="" id="motivo">
+                    <option value="">Selecciona el motivo</option>
+                    <option value="">Cumpleaños</option>
+                    <option value="">Aniversario</option>
+                    <option value="">Graduación</option>
+                    <option value="">Baby Shower</option>
+                    <option value="">Primera Comunion</option>
+                    <option value="">Otro</option>
+                </select>
+                <textarea name="" id="Algunas_Palabras" cols="30" rows="10" placeholder="Escriba algunas lindas palabras para esa persona especial"></textarea>
+                <label for="fecha" name="fecha_label" id="fecha_label">Selecciona la fecha y hora de entrega</label>
+                <input type="datetime-local" name="fecha" id="fecha">
             </div> 
         </section>
         <div class="contact">
