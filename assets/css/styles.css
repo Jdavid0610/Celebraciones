@@ -191,9 +191,6 @@ h1{
         display: block;
         text-align: left;
     }
-    #NavBar__items.responsive li:not(:first-child,:last-child) a {
-        width: 100%;
-    }
     figure{
         width: 60rem;
     }

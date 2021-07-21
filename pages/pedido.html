@@ -9,6 +9,14 @@
     <link rel="shortcut icon" href="./../assets/resources/icons/logo.png">
     <link rel="stylesheet" href="./../assets/css/styles.css">
     <link rel="stylesheet" href="./../assets/css/pedido.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_Bd3AolPH6G04HglfjnU4k");
+        })();
+    </script>
     <script src="./../assets/js/functions.js"></script>
 </head>
 <body>
@@ -42,13 +50,13 @@
         <h1>Solicita Nuestros Servicios</h1>
         <section class="container">
             <div class="form">
-                <select onchange="ServiceSelected()" name="" id="Servicio">
+                <select  name="" id="Servicio" required>
                     <option value="0">Selecciona el servicio</option>
                     <option value="1">Desayuno</option>
                     <option value="2">Ancheta</option>
                     <option value="3">Decoracion</option>
                 </select>
-                <select  onchange="MotiveSelected()"name="" id="motivo">
+                <select  onchange="MotiveSelected()"name="" id="motivo" required>
                     <option value="">Selecciona el motivo</option>
                     <option value="">Cumpleaños</option>
                     <option value="">Aniversario</option>
@@ -57,14 +65,21 @@
                     <option value="">Primera Comunion</option>
                     <option value="">Otro</option>
                 </select>
-                <textarea name="" id="Algunas_Palabras" cols="30" rows="10" placeholder="Escriba algunas lindas palabras para esa persona especial"></textarea>
-                <label for="fecha" name="fecha_label" id="fecha_label">Selecciona la fecha y hora de entrega</label>
-                <input type="datetime-local" name="fecha" id="fecha">
-            </div> 
+                <textarea name="" id="Algunas_Palabras" cols="30" rows="10" placeholder="Escriba algunas lindas palabras para esa persona especial" required></textarea>
+                <label for="fecha" name="fecha_label" id="fecha_label" required>Selecciona la fecha y hora de entrega</label>
+                <input type="datetime-local" name="fecha" id="fecha" value="" required>
+                <input type="text" name="place" id="place" placeholder="Barrio de entrega" required>
+                <input type="text" name="address" id="address" placeholder="Dirección" required>
+                <input type="tel" id="cellphone" name="cellphone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Numero celular">
+                <input type="email" name="email" id="email" placeholder="e-mail" required>
+                <input type="text" name="celebrated_name" id="celebrated_name" placeholder="Nombre del celebrado" required>
+                <input type="text" name="celebrator_name" id="celebrator_name" placeholder="Escriba su nombre" required>
+
+            </div>
+            <div class="contact">
+                <input onclick="SendEmail()" type="submit" value="Enviar">
+            </div>
         </section>
-        <div class="contact">
-            <input onclick="SendEmail()" type="button" value="Enviar">
-        </div>
     </main>
     <footer>
         <section>

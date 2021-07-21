@@ -31,7 +31,7 @@ textarea{
     cursor: pointer;
 }
 
-@media (min-height:541px)  { 
+@media (min-height:1025px)  { 
     /* smartphones, Android phones, landscape iPhone*/
     footer{
         width: 100%;

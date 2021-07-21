@@ -1,8 +1,44 @@
+
 var created=0;
 
 
 function SendEmail(){
-    window.open('mailto:jdavidortizy2k@gmail.com?subject=holi&body=exd');
+    let servicioselect=document.getElementById("Servicio");
+    let service=servicioselect.options[servicioselect.selectedIndex].text;
+    let motivoselect=document.getElementById("motivo");
+    let motive=motivoselect.options[motivoselect.selectedIndex].text;
+    let message = document.getElementById("Algunas_Palabras").value;
+    let date = document.getElementById("fecha").value;
+    let place = document.getElementById("place").value;
+    let address = document.getElementById("address").value;
+    let cellphone = document.getElementById("cellphone").value;
+    let email = document.getElementById("email").value;
+    let celebrated_name = document.getElementById("celebrated_name").value;
+    let from_name= document.getElementById("celebrator_name").value;
+    if(service=="Selecciona el servicio"||motive=="Selecciona el motivo"||message==""||date==""||place==""||address==""||cellphone==""||
+        email==""||celebrated_name==""||from_name==""){
+        alert("Porfavor llene todos los campos");
+    }else{
+        var template = {
+            from_name: from_name,
+            service: service,
+            motive: motive,
+            celebrated_name: celebrated_name,
+            message: message,
+            date: date,
+            place: place,
+            address: address,
+            cellphone: cellphone,
+            email: email,
+            reply_to: email,
+        };
+        emailjs.send("service_yxaaanc","template_v6pbpfn",template).then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert("Tu correo ha sido enviado con exito, pronto te contactaremos");
+         }, function(error) {
+            console.log('FAILED...', error);
+         });
+    }
 }
 function CreateElement(tag,id,text){
     var Obj=document.createElement(tag);
